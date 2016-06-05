@@ -6,5 +6,5 @@ class Book(models.Model):
     author = models.CharField(max_length = 200)
     description = models.TextField()
     publish_date = models.DateField(default = timezone.now)
-    price = models.DecimalField(decimal_places=2, max_digits=8)
+    price = models.DecimalField(decimal_places=3, max_digits=8)
     stock = models.IntegerField(default=0)
