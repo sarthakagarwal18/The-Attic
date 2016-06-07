@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'store',
     'registration',
+    'bootstrap3',
+    'bootstrap_themes',
     'social.apps.django_app.default',
 ]
 
