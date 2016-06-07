@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 
-{% block content %}
-There was a problem activating your account.
+{% block body %}
+    <div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 loginbox">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    Oh No!
+                </div>
+                <div style="padding-top:30px" class="panel-body">
+                    There was a problem activating your account. Please contact us at <a href="mailto:support@mysterybooks.com">support@mysterybooks.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
