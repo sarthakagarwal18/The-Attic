@@ -118,14 +118,14 @@ img.bg {
 }
 
 .loginbox {
-    margin-top: 60px;
+    margin-top:2px;
 }
 
 /* General link styles*/
 
 .maincontent {
     padding-top: 60px;
-    height: 643px;
+    height: 1000px;
     position: absolute;
     top: 0;
     background-color: #fff;
