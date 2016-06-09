@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Book, Cart, BookOrder
 from django.core.exceptions import ObjectDoesNotExist
-
+from django.utils import timezone
 
 def index(request):
     return render(request, 'template.html')
@@ -36,7 +36,7 @@ def add_to_cart(request, book_id):
                 )
                 cart.save()
             cart.add_to_cart(book_id)
-        return redirect('cart')
+        return redirect('index')
     else:
         return redirect('index')
 
@@ -70,6 +70,25 @@ def cart(request):
             'count': count,
         }
         return render(request, 'store/cart.html', context)
+    else:
+        return redirect('index')
+
+
+def complete_order(request):
+    if request.user.is_authenticated():
+        cart= Cart.objects.get(user=request.user.id,active=True)
+        orders= BookOrder.objects.filter(cart=cart)
+        total = 0
+        for order in orders:
+            total += (order.book.price * order.quantity)
+        message= "Success! Your order has been completed, and is being processed. Transaction made : $%s" %(total)
+        cart.active =False
+        cart.order_date= timezone.now()
+        cart.save()
+        context = {
+            'message': message,
+        }
+        return render (request, 'store/order_complete.html',context)
     else:
         return redirect('index')
 

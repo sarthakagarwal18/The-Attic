@@ -22,6 +22,9 @@
 		{% endfor %}
 		<div class="cart_total">
 			 <h4> Total: $<span class="cart_value">{{ total }}</span></h4>
+			{% if cart %}
+			<a href="{% url 'complete_order' %}"><input type="submit" id="btn-logic" class="btn btn-success" value="Purchase"></a>
+			{% endif %}
 		</div>
 		</div>
 	</div>
