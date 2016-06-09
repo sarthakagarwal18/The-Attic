@@ -69,7 +69,7 @@
                         {% for book in books %}
                             <div class="storefront_book_display">
                                 <a href="{% url 'book_details' book.id %}">
-                                    <img src="{% static 'base/img/empty_cover.jpg' %}">
+                                    <img src="{{ MEDIA_URL }}{{ book.cover_image }}">
                                     <span class="storefront_book_title">{{ book.title }}</span>
                                     <span class="storefront_book_author">{{ book.author }}</span>
                                 </a>
