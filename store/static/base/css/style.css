@@ -76,7 +76,7 @@ a:hover {
 
 .yo{
   width:100%;
-  height:643px;
+  height:100%;
 }
 
 img.bg {
@@ -144,11 +144,11 @@ img.bg {
 .footer {
     margin: 0;
     margin-bottom:-10px;
-    padding: 10px;
-    position: fixed;
+    padding: 5px;
+    position:fixed;
     bottom: 0;
     width: 100%;
-    height: 10px;
+    height: 5px;
     background-color: #000;
     z-index: 1;
 }

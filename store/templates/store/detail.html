@@ -9,16 +9,30 @@
 	  <span class="detail_book_title">{{ book.title }}</span>
 	  <span class="detail_book_author">{{ book.author }}</span>
 	  <div class="detail_book_description">{{ book.description }}</div>
-	  <div class="detail_book_reviews_title">Reviews</div>
+	  <div class="detail_book_reviews_title">Reviews {% if reviews %}({{ reviews.count }}){% endif %}</div>
 	  <div class="detail_book_reviews">
-	     {% if book.reviews %}
-		    {% for review in book.reviews %}
-			   {{ review.text }}
-			{% endfor %}
-		 {% else %}
-		    There are no reviews for this book yet!
-		 {% endif %}
-		  
+	     <div class="col-md-offset-3" style="margin-left:auto; margin-right:auto;">
+			 {% if form %}
+			 <h4>Have you read this book? Post a review!</h4>
+			 <form class="form-inline" action="{% url 'book_details' book.pk %}" method="POST">
+				 {% csrf_token %}
+				 {{ form.as_p }}
+				 <input type="submit" value="Submit">
+			 </form>
+			 {% endif %}
+			 {% for review in reviews %}
+			 	<div>
+					{{ review.text }}
+				</div>
+			 	<div style="font-weight:bold;">
+					-{{ review.user.username }} on {{ review.publish_date }}
+				</div>
+			 {% empty %}
+			 	<div style="margin-top:20px;">
+					There are no reviews for this book yet!
+				</div>
+			 {% endfor %}
+		 </div>
 	  </div>
    </div>
 </div>
