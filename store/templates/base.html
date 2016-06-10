@@ -35,9 +35,9 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="hvr-curl-top-right"><a href="{% url 'index' %}">Home</a></li>
-                    <li class="hvr-curl-top-right"><a href="#about">About</a></li>
-                    <li class="hvr-curl-top-right"><a href="#contact">Contact</a></li>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     {% if request.user.is_authenticated %}
                     <li class="hvr-curl-top-right"><a href="{% url 'cart' %}">My Shopping Cart</a></li>
                     {% endif %}
@@ -64,7 +64,7 @@
         <div class="parallax">
             <div class="row">
                 {% block body %}
-                    <div class="col-md-8 col-md-offset-2 col-sm-12 maincontent">
+                    <div class="col-md-10 col-md-offset-1 col-sm-12 maincontent">
                        <div style="text-align:center;"><h3>Welcome to our store!</h3></div>
                         {% for book in books %}
                             <div class="storefront_book_display">
@@ -87,7 +87,7 @@
     </div>
     <div class="row text-center navbar footer">
         <div class="col-md-12">
-            <p>2016 Mystery Books</p>
+            <p class="foottext">2016 Mystery Books</p>
         </div>
     </div>
 
