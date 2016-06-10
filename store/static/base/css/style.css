@@ -106,6 +106,7 @@ a:hover {
     width: 200px;
     display: inline-block;
     text-align: center;
+    margin:20px;
 }
 
 .storefront_book_title {
