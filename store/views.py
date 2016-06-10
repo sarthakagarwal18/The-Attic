@@ -3,6 +3,7 @@ from .models import Book, Cart, BookOrder, Review
 from django.core.exceptions import ObjectDoesNotExist
 from django.utils import timezone
 from .forms import ReviewForm
+from store import signals
 
 def index(request):
     return render(request, 'template.html')

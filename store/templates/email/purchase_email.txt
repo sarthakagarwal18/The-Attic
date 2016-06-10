@@ -1,0 +1,11 @@
+Hello {{ username }}!
+
+Thank you for buying books with us! Here's what you've got coming your way:
+
+{% for order in orders %}
+{{ order.quantity }} x {{ order.book.title }} by {{order.book.author }}
+{% endfor %}
+
+Bye for now!
+
+Mystery Books
