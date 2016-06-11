@@ -4,12 +4,19 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.utils import timezone
 from .forms import ReviewForm
 from store import signals
+import logging
+
+logger = logging.getLogger(__name__)
 
 def index(request):
     return render(request, 'template.html')
 
 
 def store(request):
+    i=0
+    while i < 20:
+        logger.debug("test log: %d" % i)
+        i += 1
     books = Book.objects.all()
     context = {
         'books': books,
