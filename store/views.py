@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Book, Cart, BookOrder, Review
 from django.core.exceptions import ObjectDoesNotExist
 from django.utils import timezone
@@ -18,7 +18,7 @@ def store(request):
 
 
 def book_details(request, book_id):
-    book = Book.objects.get(pk=book_id)
+    book = get_object_or_404(Book, id=book_id)
     context={
         'book': book,
     }
