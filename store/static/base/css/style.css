@@ -134,6 +134,11 @@ footer{
     color: teal;
 }
 
+.bluefb{
+    background-color: #3b5998;
+    color: white;
+}
+
 /* Book detail styles */
 .detail_book_display {
     text-align: center;
