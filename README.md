@@ -12,6 +12,7 @@ An Online Bookstore, made using the Django Framework, with some basic functional
      git clone https://github.com/sarthakagarwal18/Django-Bookstore.git
      pip install -r requirements.txt
      python manange.py runserver
+     Go to http://localhost:8000/store/
 
 ####Screenshot
 
