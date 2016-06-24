@@ -27,11 +27,12 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navbar">
+                    <span class="sr-only">Toggle Navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="{% url 'index' %}" class="navbar-brand">Mystery Books</a>
+                <a href="{% url 'index' %}" class="navbar-brand">The Attic</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
@@ -39,7 +40,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                     {% if request.user.is_authenticated %}
-                    <li class="hvr-curl-top-right"><a href="{% url 'cart' %}">My Shopping Cart</a></li>
+                        <li><a href="{% url 'cart' %}">My Shopping Cart</a></li>
                     {% endif %}
                 </ul>
                 <div class="navbar-form pull-right">
@@ -49,23 +50,23 @@
                             {% else %}
                             {{ request.user.username }}
                             <!--auth_logout is found in Documents/bookstore-django/Lib/site-packages/registration/auth_urls-->
-                            {% endif %}! <a href="{% url 'auth_logout' %}">Log Out</a>
+                            {% endif %}! <a class="link_text" href="{% url 'auth_logout' %}">Log Out</a>
                     {% else %}
                         <!--auth_logout is found in Documents/bookstore-django/Lib/site-packages/registration/auth_urls-->
-                        Welcome, mysterious person! <a href="{% url 'auth_login' %}">Log In</a> or <a href="{% url 'registration_register' %}">Register</a>
+                        Welcome!<a class="link_text" href="{% url 'auth_login' %}"> Log In</a> or <a class="link_text" href="{% url 'registration_register' %}">Register</a>
                     {% endif %}
                 </div>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid">
-        <img class="yo" src="{% static 'base/img/header_full.jpg' %}" />
+    <section class="cover">
+    <div class="container-fluid content-main">
         <div class="parallax">
             <div class="row">
                 {% block body %}
                     <div class="col-md-10 col-md-offset-1 col-sm-12 maincontent">
-                       <div style="text-align:center;"><h3>Welcome to our store!</h3></div>
+                       <div style="text-align:center;" class="greeting"><h3>Welcome to The Attic!</h3></div>
                         {% for book in books %}
                             <div class="storefront_book_display">
                                 <a href="{% url 'book_details' book.id %}">
@@ -85,10 +86,25 @@
             </div>
         </div>
     </div>
-    <div class="row text-center navbar footer">
-        <div class="col-md-12">
-            <p class="foottext">2016 Mystery Books</p>
-        </div>
-    </div>
+    </section>
+    <!--<footer>-->
+        <!--<div class="container-fluid">-->
+       <!--<div class="row">-->
+    <!--<div class="row text-center navbar footer">-->
+        <!--<div class="col-md-12">-->
+            <!--<p class="foottext">2016 Mystery Books</p>-->
+        <!--</div>-->
+    <!--</div>-->
+           <!--</div>-->
+            <!--</div>-->
+    <!--</footer>-->
+
+    <footer>
+      <div class="container-fluid">
+           <div style="text-align:center;margin-top:20px;font-size:14px;color:white;">
+               <p>Made in India &copy; 2016 The Attic</p>
+           </div>
+       </div>
+    </footer>
 
 {% endblock %}

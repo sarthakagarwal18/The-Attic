@@ -6,85 +6,72 @@ body {
 
 /* General link styles*/
 a {
-    color: #D8562B;
+    color: #292929;
     text-decoration: none;
 }
 
 a:hover {
-    color: #1CBC69;
+    color: teal;
     text-decoration: none;
 }
 
 /* Nav bar styles */
-.navbar{
-	filter: alpha(opacity=90);
-	-moz-opacity: 0.9;
-	-khtml-opacity: 0.9;
-	opacity: 0.9;
-    color: #e6e6e6;
-}
+
 
 #navbar .navbar-nav li a {
-    color: #D8562B;
+    color: lightblue;
     text-decoration: none;
 }
 #navbar .navbar-nav li a:hover {
-    color: #1CBC69;
+    color: teal;
     text-decoration: none;
 }
 .navbar-header .navbar-brand {
     color: #e6e6e6;
 }
+
+.link_text{
+    color: lightblue;
+    text-decoration: none;
+}
+
+.link_text:hover{
+    color: teal;
+    text-decoration: none;
+}
+
 .navbar-form {
     padding-top: 8px;
     color: #e6e6e6;
 }
 
-.yo{
-  width:100%;
-  height:100%;
+.cover{
+    background-color: teal;
+    margin-top:50px;
+    min-height: 533px;
 }
 
-.panel{
-    margin-top:-620px;
+.maincontent {
+    background-color: #fff;
+    min-height: 550px;
+    padding-bottom: 50px;
+    padding-left: 55px;
 }
 
-.panel-info > .panel-heading {
-    background-color: #D8562B;
-    border-color: #D8562B;
-}
-
-.panel-info {
-    border-color: #D8562B;
-}
-
-.panel-title {
-    color: #e6e6e6;
+.greeting{
+    margin-top:40px;
+    padding-bottom: 30px;
 }
 
 
 /* General link styles*/
 
-.maincontent {
-    padding-top: 60px;
-    position: absolute;
-    top: 0;
-    background-color: #fff;
-    padding-bottom: 65px;
-}
 
-.footer {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom:-10px;
-    bottom: 0;
+
+footer{
     width: 100%;
     background-color: #000;
-    z-index: 1;
-}
-
-.foottext{
-    margin-top:15px;
+    height: 60px;
 }
 
 /* Fix a couple things for mobile/low-res */
@@ -106,12 +93,12 @@ a:hover {
     width: 200px;
     display: inline-block;
     text-align: center;
-    margin-left:20px;
-    margin-right:20px;
-    margin
+    margin-left:25px;
+    margin-right:25px;
 }
 
 .storefront_book_title {
+    margin-top: 5px;
     font-size: 14px;
     display: block;
     font-weight: bold;
@@ -123,7 +110,28 @@ a:hover {
 }
 .storefront_add_to_cart {
     display: block;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+
+.panel{
+    background-color: #fff;
+    min-height: 100px;
+    margin-top: 60px;
+}
+
+.panel-info > .panel-heading {
+    background-color: lightblue;
+    border-color: lightblue;
+}
+
+.panel-info {
+    border-color: teal;
+}
+
+.panel-title {
+    color: teal;
 }
 
 /* Book detail styles */

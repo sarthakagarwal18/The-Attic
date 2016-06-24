@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'bootstrap_themes',
     'compressor',
     'debug_toolbar',
-    'rest_framework',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -158,7 +157,7 @@ EMAIL_HOST_USER = "sarthaktester@gmail.com"
 EMAIL_HOST_PASSWORD = "ihavethedasta"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = "books@mysterybooks.com"
+DEFAULT_FROM_EMAIL = "books@theattic.com"
 
 #Social Auth - Facebook
 SOCIAL_AUTH_FACEBOOK_KEY = '561711150674700'
