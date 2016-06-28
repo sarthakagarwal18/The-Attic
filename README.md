@@ -14,7 +14,7 @@ An Online Bookstore, made using the Django Framework, with some basic functional
      python manange.py runserver
      Go to http://localhost:8000/store/
 
-####Screenshot
+####Screenshots
 
 Home Screen
 ![](/Screenshots/Home.png?raw=true)
